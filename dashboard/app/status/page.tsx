@@ -1,23 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar";
+import StatusCard from "../../components/StatusCard";
+import { getStatus } from "../../lib/api";
 
-export default function StatusPage() {
-  const [status, setStatus] = useState<any>(null);
+export default function Page() {
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    async function load() {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/status`);
-      const data = await res.json();
-      setStatus(data);
-    }
-    load();
+    getStatus().then(setData);
   }, []);
 
   return (
-    <div className="container text-center mt-5">
-      <h2 className="mb-4">Stato bot</h2>
-      <pre>{JSON.stringify(status, null, 2)}</pre>
-    </div>
+    <>
+      <Navbar />
+      {data && <StatusCard data={data} />}
+    </>
   );
 }
