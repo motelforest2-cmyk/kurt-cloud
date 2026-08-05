@@ -1,3 +1,5 @@
+"use client";
+
 export default function InstallAutoCard({ onInstall }) {
   return (
     <div className="card">
@@ -7,7 +9,10 @@ export default function InstallAutoCard({ onInstall }) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          const id = e.target.serverId.value;
+
+          const formData = new FormData(e.target as HTMLFormElement);
+          const id = formData.get("serverId") as string;
+
           onInstall(id);
         }}
       >
@@ -16,7 +21,10 @@ export default function InstallAutoCard({ onInstall }) {
           placeholder="ServerID"
           style={{ padding: 10, width: "100%", marginBottom: 10 }}
         />
-        <button style={{ padding: 10, width: "100%" }}>Install Auto</button>
+
+        <button style={{ padding: 10, width: "100%" }}>
+          Install Auto
+        </button>
       </form>
     </div>
   );
