@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
-import QRCard from "../../components/QRCard";
+import Navbar from "../../../components/Navbar";
+import QRCard from "../../../components/QRCard";
 import { getPairing } from "../../lib/api";
 
 export default function Page() {
