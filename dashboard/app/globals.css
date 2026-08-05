@@ -1,0 +1,68 @@
+/* Layout generale */
+.layout {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+/* Sidebar stile WispByte */
+.sidebar {
+  width: 260px;
+  background: #111;
+  padding: 30px;
+  border-right: 1px solid #222;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 0;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* Contenuto */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Card stile WispByte */
+.card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #222;
+}
+
+.card.warning {
+  border-color: #ffcc00;
+}
+
+/* Titoli */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* QR */
+.qr {
+  margin-top: 20px;
+  border-radius: 12px;
+}
