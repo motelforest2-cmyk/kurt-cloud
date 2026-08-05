@@ -1,68 +1,52 @@
-/* Layout generale */
 .layout {
-  margin: 0;
-  padding: 0;
   display: flex;
-  background: #0d0d0d;
+  background: #050608;
   color: #fff;
   font-family: Inter, sans-serif;
 }
 
-/* Sidebar stile WispByte */
 .sidebar {
   width: 260px;
-  background: #111;
+  background: #0b0c10;
   padding: 30px;
-  border-right: 1px solid #222;
+  border-right: 1px solid #1f2833;
   height: 100vh;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 40px;
+  color: #66fcf1;
 }
 
 .menu a {
   display: block;
-  padding: 12px 0;
-  color: #ccc;
+  padding: 10px 0;
+  color: #c5c6c7;
   text-decoration: none;
-  font-size: 16px;
+  transition: 0.2s;
 }
 
 .menu a:hover {
-  color: #fff;
+  color: #66fcf1;
 }
 
-/* Contenuto */
 .content {
   flex: 1;
-  padding: 40px;
+  padding: 30px;
 }
 
-/* Card stile WispByte */
 .card {
-  background: #1a1a1a;
-  padding: 25px;
+  background: #0b0c10;
+  padding: 20px;
   border-radius: 12px;
-  margin-bottom: 25px;
-  border: 1px solid #222;
+  border: 1px solid #1f2833;
+  margin-bottom: 20px;
 }
 
-.card.warning {
-  border-color: #ffcc00;
-}
-
-/* Titoli */
 .title {
-  font-size: 32px;
+  color: #66fcf1;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 30px;
-}
-
-/* QR */
-.qr {
-  margin-top: 20px;
-  border-radius: 12px;
 }
