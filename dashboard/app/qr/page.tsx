@@ -1,20 +1,25 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "../../../components/Navbar";
+import PhoneInputCard from "../../../components/PhoneInputCard";
 import QRCard from "../../../components/QRCard";
 import { getPairing } from "../../../lib/api";
 
 export default function Page() {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    getPairing().then(setData);
-  }, []);
+  async function handleNumber(number) {
+    const res = await getPairing(number);
+    setData(res);
+  }
 
   return (
     <>
       <Navbar />
+
+      {!data && <PhoneInputCard onSubmit={handleNumber} />}
+
       {data && <QRCard data={data} />}
     </>
   );
