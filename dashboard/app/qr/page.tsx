@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../../../components/Navbar";
 import QRCard from "../../../components/QRCard";
-import { getPairing } from "../../lib/api";
+import { getPairing } from "../../../lib/api";
 
 export default function Page() {
   const [data, setData] = useState(null);
